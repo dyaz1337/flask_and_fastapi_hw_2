@@ -1,0 +1,13 @@
+{% from "_formhelper.html" import render_field %}
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+<!--    form.csrf_token -->
+    {{ form.hidden_tag() }}
+    {{ render_field(form.photo) }}
+    <br>
+    {{ form.submit(class="btn btn-secondary") }}
+</form>
+{% endblock %}

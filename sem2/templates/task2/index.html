@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<img class="rounded  mx-auto d-block" src="{{ url_for('static', filename='img/task1_img.jpg') }}" alt="Image">
+<a class="text-decoration-none" href="{{ url_for('task2_upload_img') }}">
+    Нажми меня
+</a>
+{% endblock %}
